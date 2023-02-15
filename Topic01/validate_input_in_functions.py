@@ -10,6 +10,14 @@ validates the test_score, and returns a string. String will be either test name 
 if validation passes, or test_name and invalid_message.
 """
 def score_input(test_name, test_score=-1, invalid_message='Invalid Test Score!'):
+    """
+    Accepts test name and score, validates scores, returns valid entries as "test_name: test_score"
+    :param test_name: string passed to function
+    :param test_score: a number passed to function, validated to be an int between 1 and 100,
+            default set to -1
+    :param invalid_message: default string that is returned if test_score is not valid
+    :returns a string with either test info or invalid statement
+    """
 #try to cast test_score as int
     try:
         test_score_as_int = int(test_score)
